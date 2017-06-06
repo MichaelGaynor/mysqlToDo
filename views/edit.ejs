@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <h1>Welcome to the edit page!</h1>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table">
+                    <tr>
+                        <td>Task id: <%=task.id%></td>
+                        <td>Task name:  <%=task.taskName%></td>
+                        <td>Task date: <%=task.taskDate%></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <form class="form-inline" action="/editItem?id=<%=task.id%>" method="post">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="New Task" name="newTask" value="<%=task.taskName%>">
+                        </div>
+                        <div class="input-group">
+                            <input type="date" class="form-control" name="newTaskDate" value="<%=task.taskDate%>">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        EDIT TASK
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
